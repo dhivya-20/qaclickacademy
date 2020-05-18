@@ -135,15 +135,15 @@ public class PracticePage {
 		String text10=driver.findElementByXPath("//legend[text()='Mouse Hover Example']").getText();
 		System.out.println(text10);
 		WebElement button=driver.findElementById("mousehover");
-	    Actions action=new Actions(driver);
-	    Thread.sleep(500);
-	    action.moveToElement(button).build().perform(); 
-	    driver.findElementByLinkText("Reload").click();
-	    System.out.println("The page is reloaded");
-	    System.out.println("");
+	        Actions action=new Actions(driver);
+	    	Thread.sleep(500);
+	    	action.moveToElement(button).build().perform(); 
+	    	driver.findElementByLinkText("Reload").click();
+	    	System.out.println("The page is reloaded");
+	    	System.out.println("");
 	    
-	    //iframe
-	    String text11=driver.findElementByXPath("//legend[text()='iFrame Example']").getText();
+	    	//iframe
+	    	String text11=driver.findElementByXPath("//legend[text()='iFrame Example']").getText();
 		System.out.println(text11);
 		driver.switchTo().frame("iframe-name");
 		int count1=driver.findElementsByTagName("a").size();
@@ -167,8 +167,8 @@ public class PracticePage {
 		Iterator<String> itt=s.iterator();
 		while(itt.hasNext())
 		{
-		driver.switchTo().window(itt.next());
-		System.out.println("Title: " +driver.getTitle());	 
+			driver.switchTo().window(itt.next());
+			System.out.println("Title: " +driver.getTitle());	 
 		}
 		
 		
